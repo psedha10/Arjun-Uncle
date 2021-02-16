@@ -1,11 +1,37 @@
-body{
-    font-family: cursive;
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-left: 4%;
+  color: rgb(0, 81, 83);
+  margin-bottom: 2ch;
 }
 
-#reset{
-    color:red;
+h1 {
+  text-align: center;
+  color: brown;
 }
 
-#submit{
-    color: blue;
+h2 {
+  color: darkcyan;
+}
+
+#reset {
+  color: red;
+}
+
+#submit {
+  color: blue;
+}
+
+/* Centering the placeholder */
+::-webkit-input-placeholder {
+  text-align: center;
+}
+:-moz-placeholder {
+  text-align: center;
+}
+::-moz-placeholder {
+  text-align: center;
+}
+:-ms-input-placeholder {
+  text-align: center;
 }
