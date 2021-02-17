@@ -1,3 +1,4 @@
+//preview of image after upload
 function PreviewImage() {
   var oFReader = new FileReader();
   oFReader.readAsDataURL(document.getElementById("image").files[0]);
