@@ -64,118 +64,171 @@
 
             II. Is there any visible pre-existing damage to the appliance?
             <br>
-            <select id="test" name="form_select" onchange="showDiv(this)">
-                <option value="0" selected>No</option>
-                <option value="1">Yes</option>
+            <select name="yn1" onchange="showDiv1(this)">
+                <option value="0" selected></option>
+                <option value="1">No</option>
+                <option value="2">Yes</option>
             </select>
             <br><br><br>
 
 
-            <div id="hidden_div" style="display:none;">
+            <div id="hidden_div1" style="display:none;">
                 III. Take a photo of the damage: <br><br>
                 <input id="image2" type="file" name="photo2" onchange="PreviewImage2();" accept="image/*">
                 <br><br>
                 <img id="preview2" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+                <br><br><br>
+
+                IV. Step-A is finished. Progress to step-B.
+            </div>
+
+            <div id="hidden_div2" style="display:none;">
+                III. This section is finished. Progress to next section.
+            </div>
+        </div>
+
+
+
+
+        <div id="B">
+            <br>
+            <h3>B. Data Plate</h3>
+
+            I. Is the data plate accessible?
+            <br>
+
+            <select name="yn2" onchange="showDiv2(this)">
+                <option value="0" selected></option>
+                <option value="1">No</option>
+                <option value="2">Yes</option>
+            </select>
+            <br><br><br>
+
+            <div id="hidden_div3" style="display:none;">
+                II. Reason for data plate not being accessible:<br>
+                <select name="yn3" onchange="showDiv3(this)">
+                    <option value="0" selected></option>
+                    <option value="1">Data plate has been removed.</option>
+                    <option value="2">Data plate no easily accessible.</option>
+                    <option name="" value="3">Data plate worn/ Unreadable.</option>
+                </select>
                 <br><br>
+
             </div>
 
-            Step-A is finished. Progress to step-B.
+            <div id="hidden_div4" style="display:none;">
 
+                II. Take a photo of data plate:
+                <br><br>
 
-            <div id="B">
-                <br>
-                <h3>B. Data Plate</h3>
+                <input id="image3" type="file" name="photo3" onchange="PreviewImage3();" accept="image/*">
+                <br><br>
+                <img id="preview3" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+                <br><br><br>
+
+                III. This section is finished. Progress to next section.
             </div>
-            <br><br><br><br>
+
+        </div>
+        <br><br>
 
 
-            <div id="C">
-                <br>
-                <h3>C. Support/ Fixing/ Securing of Appliance</h3>
-            </div>
-            <br><br><br><br>
+        <!--2. Data Plate
+         a. Is the data plate accessible?
+        if yes [photo]/ if no [reason]
+         b. if no [Why cant the data plate be accessed?]
+        Options: Data plate has been removed.
+              Not easily accessible.
+              Worn unreadable.
+        c. IF worn unreadable [take a photo of worn data plate.]-->
+
+        <div id="C">
+            <br>
+            <h3>C. Support/ Fixing/ Securing of Appliance</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="D">
-                <br>
-                <h3>D. Water and Gas Connection</h3>
-            </div>
-            <br><br><br><br>
+        <div id="D">
+            <br>
+            <h3>D. Water and Gas Connection</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="E">
-                <br>
-                <h3>E. Integrity/ Clearances of Flue System</h3>
-            </div>
-            <br><br><br><br>
+        <div id="E">
+            <br>
+            <h3>E. Integrity/ Clearances of Flue System</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="F">
-                <br>
-                <h3>F. P.T.R Drain</h3>
-            </div>
-            <br><br><br><br>
+        <div id="F">
+            <br>
+            <h3>F. P.T.R Drain</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="G">
-                <br>
-                <h3>G. Tempering Valve</h3>
-            </div>
-            <br><br><br><br>
+        <div id="G">
+            <br>
+            <h3>G. Tempering Valve</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="H">
-                <br>
-                <h3>H. Pilot/ Thermocouple/ Burner Storage</h3>
-            </div>
-            <br><br><br><br>
+        <div id="H">
+            <br>
+            <h3>H. Pilot/ Thermocouple/ Burner Storage</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="I">
-                <br>
-                <h3>I. Gas Valves storage hot water</h3>
-            </div>
-            <br><br><br><br>
+        <div id="I">
+            <br>
+            <h3>I. Gas Valves storage hot water</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="J">
-                <br>
-                <h3>J. Gas/ Electrical Safety</h3>
-            </div>
-            <br><br><br><br>
+        <div id="J">
+            <br>
+            <h3>J. Gas/ Electrical Safety</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="K">
-                <br>
-                <h3>K. Appliance Condition</h3>
-            </div>
-            <br><br><br><br>
+        <div id="K">
+            <br>
+            <h3>K. Appliance Condition</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="L">
-                <br>
-                <h3>L. Appliance Operation</h3>
-            </div>
-            <br><br><br><br>
+        <div id="L">
+            <br>
+            <h3>L. Appliance Operation</h3>
+        </div>
+        <br><br><br><br>
 
 
-            <div id="M">
-                <br>
-                <h3>M. Appliance Base</h3>
-            </div>
-            <br><br>
+        <div id="M">
+            <br>
+            <h3>M. Appliance Base</h3>
+        </div>
+        <br><br>
 
-            <div id="N">
-                <br>
-                <h3>N. Safety on Completion</h3>
-            </div>
-            <br><br><br><br>
+        <div id="N">
+            <br>
+            <h3>N. Safety on Completion</h3>
+        </div>
+        <br><br><br><br>
 
 
 
-            <!--Submit and Reset-->
-            <input type="submit" name="submit" id="submit" style="padding:5px;" value="Submit Details" title="This will upload all the details from step 1,2 & 3. Finalize before uploading.">
-            <input type="reset" name="reset" id="reset" style="padding:5px; margin-left:1ch;" value="Reset All Entries" title="This will clear all data. Proceed with caution.">
+        <!--Submit and Reset-->
+        <input type="submit" name="submit" id="submit" style="padding:5px;" value="Submit Details" title="This will upload all the details from step 1,2 & 3. Finalize before uploading.">
+        <input type="reset" name="reset" id="reset" style="padding:5px; margin-left:1ch;" value="Reset All Entries" title="This will clear all data. Proceed with caution.">
     </form>
 
 
@@ -187,11 +240,7 @@
 <!--
 
 CHECKLIST {For hot water storage tank}
-1. General Appliance Photo
-  a. Take 1 photo 2 meters away of the appliance showing its surrounding
-    [Upload Photo]
-  b. Is there any visible pre-existing damage to the appliance? [yes/ no option]
-    if yes {photo of damage} if no (move to step 2)
+
 
 2. Data Plate
   a. Is the data plate accessible?
@@ -301,6 +350,7 @@ No- Is the appliance level? yes/no - photo
   Any accidenatal damage caused by you? yes - photo and explanation (text box)
                                         no - finish
 
+                                
 
 
 COMMON IN ALL
@@ -308,4 +358,10 @@ plate
 photo
 safety on completion
 General Notes [Text Box]
+
+1. General Appliance Photo
+  a. Take 1 photo 2 meters away of the appliance showing its surrounding
+    [Upload Photo]
+  b. Is there any visible pre-existing damage to the appliance? [yes/ no option]
+    if yes {photo of damage} if no (move to step 2)
 -->

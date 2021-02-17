@@ -10,3 +10,9 @@ function PreviewImage2() {
   oFReader2.readAsDataURL(document.getElementById("image2").files[0]);
   oFReader2.onload = function (oFREvent) {document.getElementById("preview2").src = oFREvent.target.result;};
 }
+
+function PreviewImage3() {
+  var oFReader3 = new FileReader();
+  oFReader3.readAsDataURL(document.getElementById("image3").files[0]);
+  oFReader3.onload = function (oFREvent) {document.getElementById("preview3").src = oFREvent.target.result;};
+}
