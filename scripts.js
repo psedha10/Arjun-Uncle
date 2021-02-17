@@ -8,3 +8,12 @@ function PreviewImage() {
   };
 }
 
+
+//right navigation pane for checklist
+function openNav() {
+  document.getElementById("mySidenav").style.width = "365px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
