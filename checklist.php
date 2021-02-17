@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Adding to Database</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="scripts.js"></script>
+    <script src="image_preview.js"></script>
+    <script src="show_hidden.js"></script>
 </head>
 
 
@@ -33,6 +34,19 @@
     </div>
     <br><br>
 
+    <script type="text/javascript">
+        //right navigation pane for checklist
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "365px";
+            //shows pane
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            //hides pane
+        }
+    </script>
+
 
     <h2>3. Checklist</h2>
 
@@ -40,119 +54,128 @@
     <form name="form" action="insert.php" method="POST" enctype="multipart/form-data">
 
         <div id="A">
-        <br>
+            <br>
             <h3>A. General Appliance Photo</h3>
             I. Take one photo 2 meters away of the appliance showing its surrounding:<br><br>
-            <input id="image" type="file" name="photo1" onchange="PreviewImage();" accept="image/*">
+            <input id="image1" type="file" name="photo1" onchange="PreviewImage1();" accept="image/*">
             <br><br>
-            <img id="preview" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+            <img id="preview1" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
             <br><br><br>
 
             II. Is there any visible pre-existing damage to the appliance?
             <br>
-            <input type="radio" name="yn1">Yes<br>
-            <input type="radio" name="yn1">No
+            <select id="test" name="form_select" onchange="showDiv(this)">
+                <option value="0" selected>No</option>
+                <option value="1">Yes</option>
+            </select>
+            <br><br><br>
+
+
+            <div id="hidden_div" style="display:none;">
+                III. Take a photo of the damage: <br><br>
+                <input id="image2" type="file" name="photo2" onchange="PreviewImage2();" accept="image/*">
+                <br><br>
+                <img id="preview2" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+                <br><br>
+            </div>
+
+            Step-A is finished. Progress to step-B.
+
+
+            <div id="B">
+                <br>
+                <h3>B. Data Plate</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="C">
+                <br>
+                <h3>C. Support/ Fixing/ Securing of Appliance</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="D">
+                <br>
+                <h3>D. Water and Gas Connection</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="E">
+                <br>
+                <h3>E. Integrity/ Clearances of Flue System</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="F">
+                <br>
+                <h3>F. P.T.R Drain</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="G">
+                <br>
+                <h3>G. Tempering Valve</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="H">
+                <br>
+                <h3>H. Pilot/ Thermocouple/ Burner Storage</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="I">
+                <br>
+                <h3>I. Gas Valves storage hot water</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="J">
+                <br>
+                <h3>J. Gas/ Electrical Safety</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="K">
+                <br>
+                <h3>K. Appliance Condition</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="L">
+                <br>
+                <h3>L. Appliance Operation</h3>
+            </div>
+            <br><br><br><br>
+
+
+            <div id="M">
+                <br>
+                <h3>M. Appliance Base</h3>
+            </div>
             <br><br>
 
-            III. If Yes, take a photo of {photo of damage} if no (move to step 2)
-        </div>
-        <br><br><br><br>
-
-
-        <div id="B">
-        <br>
-            <h3>B. Data Plate</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="C">
-        <br>
-            <h3>C. Support/ Fixing/ Securing of Appliance</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="D">
-        <br>
-            <h3>D. Water and Gas Connection</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="E">
-        <br>
-            <h3>E. Integrity/ Clearances of Flue System</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="F">
-        <br>
-            <h3>F. P.T.R Drain</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="G">
-        <br>
-            <h3>G. Tempering Valve</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="H">
-        <br>
-            <h3>H. Pilot/ Thermocouple/ Burner Storage</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="I">
-        <br>
-            <h3>I. Gas Valves storage hot water</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="J">
-        <br>
-            <h3>J. Gas/ Electrical Safety</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="K">
-        <br>
-            <h3>K. Appliance Condition</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="L">
-        <br>
-            <h3>L. Appliance Operation</h3>
-        </div>
-        <br><br><br><br>
-
-
-        <div id="M">
-        <br>
-            <h3>M. Appliance Base</h3>
-        </div>
-        <br><br>
-
-        <div id="N">
-        <br>
-            <h3>N. Safety on Completion</h3>
-        </div>
-        <br><br><br><br>
+            <div id="N">
+                <br>
+                <h3>N. Safety on Completion</h3>
+            </div>
+            <br><br><br><br>
 
 
 
-        <!--Submit and Reset-->
-        <input type="submit" name="submit" id="submit" style="padding:5px;" value="Submit Details" title="This will upload all the details from step 1,2 & 3. Finalize before uploading.">
-        <input type="reset" name="reset" id="reset" style="padding:5px; margin-left:1ch;" value="Reset All Entries" title="This will clear all data. Proceed with caution.">
+            <!--Submit and Reset-->
+            <input type="submit" name="submit" id="submit" style="padding:5px;" value="Submit Details" title="This will upload all the details from step 1,2 & 3. Finalize before uploading.">
+            <input type="reset" name="reset" id="reset" style="padding:5px; margin-left:1ch;" value="Reset All Entries" title="This will clear all data. Proceed with caution.">
     </form>
 
 

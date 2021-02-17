@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Adding to Database</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="scripts.js"></script>
 </head>
 
 
