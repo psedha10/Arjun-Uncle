@@ -40,3 +40,15 @@ function PreviewImage7() {
   oFReader7.readAsDataURL(document.getElementById("image7").files[0]);
   oFReader7.onload = function (oFREvent) {document.getElementById("preview7").src = oFREvent.target.result;};
 }
+
+function PreviewImage8() {
+  var oFReader8 = new FileReader();
+  oFReader8.readAsDataURL(document.getElementById("image8").files[0]);
+  oFReader8.onload = function (oFREvent) {document.getElementById("preview8").src = oFREvent.target.result;};
+}
+
+function PreviewImage9() {
+  var oFReader9 = new FileReader();
+  oFReader9.readAsDataURL(document.getElementById("image9").files[0]);
+  oFReader9.onload = function (oFREvent) {document.getElementById("preview9").src = oFREvent.target.result;};
+}

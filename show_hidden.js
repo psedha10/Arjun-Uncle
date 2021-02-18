@@ -80,3 +80,27 @@ function showDiv4(select) {
     document.getElementById("hidden_div12").style.display = "none";
   }
 }
+
+function showDiv5(select) {
+  if (select.value == 2) {
+    document.getElementById("hidden_div13").style.display = "block";
+  } else {
+    document.getElementById("hidden_div13").style.display = "none";
+  }
+}
+
+function showDiv6(select) {
+  if (select.value == 2) {
+    document.getElementById("hidden_div14").style.display = "block";
+  } else {
+    document.getElementById("hidden_div14").style.display = "none";
+  }
+}
+
+function showDiv7(select) {
+  if (select.value == 2) {
+    document.getElementById("hidden_div15").style.display = "block";
+  } else {
+    document.getElementById("hidden_div15").style.display = "none";
+  }
+}

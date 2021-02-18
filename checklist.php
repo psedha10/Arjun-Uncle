@@ -55,6 +55,8 @@
 
 
 
+
+
         <div id="A">
             <br>
             <h3>A. General Appliance Photo</h3>
@@ -88,6 +90,10 @@
                 III. This section is finished. Progress to next section.
             </div>
         </div>
+
+
+
+
 
 
 
@@ -250,6 +256,8 @@
 
 
 
+
+
         <div id="D">
             <br>
             <h3>D. Water and Gas Connection</h3>
@@ -319,11 +327,102 @@
         </div>
         <br><br>
 
+
+
+
+
+
+
+
+
+
+
+
+
         <div id="N">
             <br>
             <h3>N. Safety on Completion</h3>
+
+
+            I. Take a wide-angle photo of the Appliance:
+            <br><br>
+
+            <input id="image8" type="file" name="photo8" onchange="PreviewImage8();" accept="image/*">
+            <br><br>
+            <img id="preview8" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+            <br><br><br>
+
+
+            II. Any further work required?
+            <br><br>
+
+            <select name="yn5" onchange="showDiv5(this)">
+                <option value="0" selected></option>
+                <option value="1">No</option>
+                <option value="2">Yes</option>
+            </select>
+
+            <div id="hidden_div13" style="display:none;">
+                <br>
+                <textarea rows="5" cols="60" name="description3" placeholder="Enter the work details here."></textarea>
+                <br><br>
+            </div>
+            <br><br><br>
+
+
+            III. Any further notes?
+            <br><br>
+
+            <select name="yn6" onchange="showDiv6(this)">
+                <option value="0" selected></option>
+                <option value="1">No</option>
+                <option value="2">Yes</option>
+            </select>
+
+            <div id="hidden_div14" style="display:none;">
+                <br>
+                <textarea rows="5" cols="60" name="description4" placeholder="Enter the notes here."></textarea>
+                <br><br>
+            </div>
+            <br><br><br>
+
+
+            IV. Any accidenatal damage caused by you?
+            <br><br>
+
+            <select name="yn7" onchange="showDiv7(this)">
+                <option value="0" selected></option>
+                <option value="1">No</option>
+                <option value="2">Yes</option>
+            </select>
+
+            <div id="hidden_div15" style="display:none;">
+                <br>
+
+                <div style="margin-left: 50px;">
+                    a. Take a photo of the damage:
+                    <br><br>
+                    <input id="image9" type="file" name="photo9" onchange="PreviewImage9();" accept="image/*">
+                    <br><br>
+                    <img id="preview9" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+                    <br><br><br>
+
+                    b. How did you cause the damage?
+                    <br><br>
+                    <textarea rows="5" cols="60" name="description5" placeholder="Enter details here."></textarea>
+                    <br><br>
+                </div>
+            </div>
+            <br><br><br>
+
+
+            V. This section is finished. Fill the general report and submit the file.
+            <br><br>
+
         </div>
-        <br><br><br><br>
+        <br><br>
+
+
 
 
 
@@ -434,7 +533,7 @@ No- Is the appliance level? yes/no - photo
   Any accidenatal damage caused by you? yes - photo and explanation (text box)
                                         no - finish
 
-                                
+
 
 
 COMMON IN ALL
@@ -463,6 +562,6 @@ General Notes [Text Box]
            Appliance is secured incorrectly. [note {What is wrong with current securing of appliance}, photo and finish.]
            Appliance is not required to be secured. [finish.]
            Appliance not secure. [note {How should the appliance be secured}, photo and finish]
-           Appliance not level and plumb. [finish.]    
+           Appliance not level and plumb. [finish.]
 
 -->
