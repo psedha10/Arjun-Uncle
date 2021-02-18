@@ -30,7 +30,9 @@
         <a href="#K"> K. Appliance Condition</a>
         <a href="#L"> L. Appliance Operation</a>
         <a href="#M"> M. Appliance Base</a>
-        <a href="#N"> N. Safety on Completion</a>
+        <a href="#N"> N. Safety on Completion</a><br>
+        <a href="#summary_report"> Summary Report </a>
+        <a href="#submit"> Submit </a>
     </div>
     <br><br>
 
@@ -321,13 +323,23 @@
         <br><br><br><br>
 
 
+
+
+
+
+
+
+
         <div id="M">
             <br>
             <h3>M. Appliance Base</h3>
         </div>
         <br><br>
 
-
+        <!--13. Appliance Base
+Do the appliance needs a base? (Select No, if sitting on a concrete or wall-mounted)
+Yes- Does it have a solid base? (yes/no) - Is the appliance level? yes/no - photo
+No- Is the appliance level? yes/no - photo-->
 
 
 
@@ -416,17 +428,21 @@
             <br><br><br>
 
 
-            V. This section is finished. Fill the general report and submit the file.
-            <br><br>
+            V. This section is finished. Fill the general summary report and submit the file.
+            <br><br><br>
 
         </div>
-        <br><br>
 
 
+
+        <h2 id="summary_report">Summary Report</h2>
+        <textarea rows="8" cols="80" name="description6" placeholder="Enter summary report here."></textarea>
+        <br><br><br>
 
 
 
         <!--Submit and Reset-->
+
         <input type="submit" name="submit" id="submit" style="padding:5px;" value="Submit Details" title="This will upload all the details from step 1,2 & 3. Finalize before uploading.">
         <input type="reset" name="reset" id="reset" style="padding:5px; margin-left:1ch;" value="Reset All Entries" title="This will clear all data. Proceed with caution.">
     </form>

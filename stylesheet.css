@@ -38,7 +38,7 @@ h2 {
 
 /* Right Navigation Pane in checklist */
 .sidenav {
-  height: 65%;
+  height: 75%;
   width: 0;
   position: fixed;
   z-index: 1;
