@@ -53,6 +53,8 @@
 
     <form name="form" action="insert.php" method="POST" enctype="multipart/form-data">
 
+
+
         <div id="A">
             <br>
             <h3>A. General Appliance Photo</h3>
@@ -79,13 +81,15 @@
                 <img id="preview2" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
                 <br><br><br>
 
-                IV. Step-A is finished. Progress to step-B.
+                IV. This section is finished. Progress to next section.
             </div>
 
             <div id="hidden_div2" style="display:none;">
                 III. This section is finished. Progress to next section.
             </div>
         </div>
+
+
 
 
 
@@ -110,9 +114,9 @@
                     <option value="0" selected></option>
                     <option value="1">Data plate has been removed.</option>
                     <option value="2">Data plate no easily accessible.</option>
-                    <option name="" value="3">Data plate worn/ Unreadable.</option>
+                    <option value="3">Data plate worn/ Unreadable.</option>
                 </select>
-                <br><br>
+                <br><br><br>
 
             </div>
 
@@ -129,24 +133,121 @@
                 III. This section is finished. Progress to next section.
             </div>
 
+            <div id="hidden_div5" style="display:none;">
+                III. This section is finished. Progress to next section.<br>
+            </div>
+
+            <div id="hidden_div7" style="display:none;">
+                III. This section is finished. Progress to next section.<br>
+            </div>
+
+            <div id="hidden_div6" style="display:none;">
+
+                III. Take a photo of worn data plate:
+                <br><br>
+
+                <input id="image4" type="file" name="photo4" onchange="PreviewImage4();" accept="image/*">
+                <br><br>
+                <img id="preview4" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+                <br><br><br>
+
+                IV. This section is finished. Progress to next section.
+            </div>
+
         </div>
         <br><br>
 
 
-        <!--2. Data Plate
-         a. Is the data plate accessible?
-        if yes [photo]/ if no [reason]
-         b. if no [Why cant the data plate be accessed?]
-        Options: Data plate has been removed.
-              Not easily accessible.
-              Worn unreadable.
-        c. IF worn unreadable [take a photo of worn data plate.]-->
+
+
+
+
 
         <div id="C">
             <br>
             <h3>C. Support/ Fixing/ Securing of Appliance</h3>
+
+            I. Current Status of Appliance Support:
+            <br><br>
+
+            <select name="yn4" onchange="showDiv4(this)">
+                <option value="0" selected></option>
+                <option value="1">Appliance is secured correctly.</option>
+                <option value="2">Appliance is secured incorrectly.</option>
+                <option value="3">Appliance not required to be secured.</option>
+                <option value="4">Appliance not secured.</option>
+                <option value="5">Appliance not level and plumb.</option>
+            </select>
+            <br><br><br>
+
+            <div id="hidden_div8" style="display:none;">
+
+                II. Take a photo of Appliance Support:
+                <br><br>
+
+                <input id="image5" type="file" name="photo5" onchange="PreviewImage5();" accept="image/*">
+                <br><br>
+                <img id="preview5" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+                <br><br><br>
+
+                III. This section is finished. Progress to next section.
+            </div>
+
+
+            <div id="hidden_div9" style="display:none;">
+
+                II. What is wrong with current securing of appliance?
+                <br>
+                <textarea rows="5" cols="60" name="description1" placeholder="Enter text here."></textarea>
+                <br><br>
+
+                III. Take a photo of Appliance Support:
+                <br><br>
+
+                <input id="image6" type="file" name="photo6" onchange="PreviewImage6();" accept="image/*">
+                <br><br>
+                <img id="preview6" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+                <br><br><br>
+
+                IV. This section is finished. Progress to next section.
+            </div>
+
+
+            <div id="hidden_div10" style="display:none;">
+                II. This section is finished. Progress to next section.
+            </div>
+
+
+            <div id="hidden_div11" style="display:none;">
+
+                II. How should the appliance be secured?
+                <br>
+                <textarea rows="5" cols="60" name="description2" placeholder="Enter text here."></textarea>
+                <br><br>
+
+                III. Take a photo of Appliance Support:
+                <br><br>
+
+                <input id="image7" type="file" name="photo7" onchange="PreviewImage7();" accept="image/*">
+                <br><br>
+                <img id="preview7" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+                <br><br><br>
+
+                IV. This section is finished. Progress to next section.
+            </div>
+
+            <div id="hidden_div12" style="display:none;">
+                II. This section is finished. Progress to next section.
+            </div>
+
         </div>
-        <br><br><br><br>
+        <br><br>
+
+
+
+
+
+
 
 
         <div id="D">
@@ -240,23 +341,6 @@
 <!--
 
 CHECKLIST {For hot water storage tank}
-
-
-2. Data Plate
-  a. Is the data plate accessible?
-    if yes [photo]/ if no [reason]
-  b. if no [Why cant the data plate be accessed?]
-     Options: Data plate has been removed.
-              Not easily accessible.
-              Worn unreadable.
-  c. IF worn unreadable [take a photo of worn data plate.]
-
-3. Support/ Fixing/ Securing of Appliance
-  Options: Appliance is secured correctly. [Photo and finish.]
-           Appliance is secured incorrectly. [note {What is wrong with current securing of appliance}, photo and finish.]
-           Appliance is not required to be secured. [finish.]
-           Appliance not secure. [note {How should the appliance be secured}, photo and finish]
-           Appliance not level and plumb. [finish.]
 
 4. Water and Gas Connection
   Is there a non return Valve?
@@ -364,4 +448,21 @@ General Notes [Text Box]
     [Upload Photo]
   b. Is there any visible pre-existing damage to the appliance? [yes/ no option]
     if yes {photo of damage} if no (move to step 2)
+
+2. Data Plate
+  a. Is the data plate accessible?
+    if yes [photo]/ if no [reason]
+  b. if no [Why cant the data plate be accessed?]
+     Options: Data plate has been removed.
+              Not easily accessible.
+              Worn unreadable.
+  c. IF worn unreadable [take a photo of worn data plate.]
+
+3. Support/ Fixing/ Securing of Appliance
+  Options: Appliance is secured correctly. [Photo and finish.]
+           Appliance is secured incorrectly. [note {What is wrong with current securing of appliance}, photo and finish.]
+           Appliance is not required to be secured. [finish.]
+           Appliance not secure. [note {How should the appliance be secured}, photo and finish]
+           Appliance not level and plumb. [finish.]    
+
 -->

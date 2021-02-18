@@ -16,3 +16,27 @@ function PreviewImage3() {
   oFReader3.readAsDataURL(document.getElementById("image3").files[0]);
   oFReader3.onload = function (oFREvent) {document.getElementById("preview3").src = oFREvent.target.result;};
 }
+
+function PreviewImage4() {
+  var oFReader4 = new FileReader();
+  oFReader4.readAsDataURL(document.getElementById("image4").files[0]);
+  oFReader4.onload = function (oFREvent) {document.getElementById("preview4").src = oFREvent.target.result;};
+}
+
+function PreviewImage5() {
+  var oFReader5 = new FileReader();
+  oFReader5.readAsDataURL(document.getElementById("image5").files[0]);
+  oFReader5.onload = function (oFREvent) {document.getElementById("preview5").src = oFREvent.target.result;};
+}
+
+function PreviewImage6() {
+  var oFReader6 = new FileReader();
+  oFReader6.readAsDataURL(document.getElementById("image6").files[0]);
+  oFReader6.onload = function (oFREvent) {document.getElementById("preview6").src = oFREvent.target.result;};
+}
+
+function PreviewImage7() {
+  var oFReader7 = new FileReader();
+  oFReader7.readAsDataURL(document.getElementById("image7").files[0]);
+  oFReader7.onload = function (oFREvent) {document.getElementById("preview7").src = oFREvent.target.result;};
+}
