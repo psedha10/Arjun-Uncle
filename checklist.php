@@ -315,13 +315,76 @@
         </div>
         <br><br><br><br>
 
+        <!--11. Appliance Condition
+Good and safe {finish}
+General Wear and Tear/ Working Condition [finish]
+Worn condition due to age (safe and operational) [finish]
+UNSAFE requires disconnection and rectification [disconnect immediately and is there asbestos flue to be removed? Yes/no finish]
+Poor Condition requires Replacement (Not disconnected) [is there asbestos flue to be removed? Yes/no finish]
+Poor Condition requires Replacement (Disconnected) [Whats wrong? (text box) and is there asbestos flue to be removed? Yes/no finish]
+Requires part but functional [finish]
+Requires part (Appliance not operational) [Does the appliance needs to be disconnected until parts are replaced? yes - disconnect / finish
+                                                                                                                 no - finish
+Safety protocol that needs disconnection and replacement [Disconnect / is there asbestos flue to be removed? Yes/no finish]
+Appliance not operational [Was this appliance not operating before your attendance?] yes - finish
+                                                                                     no - do we need a diagonistic to attend to fix? yes/no finish.-->
+
+
+
+
+
+
+
+
+
 
         <div id="L">
             <br>
             <h3>L. Appliance Operation</h3>
-        </div>
-        <br><br><br><br>
 
+            I. Is the appliance working?
+            <br><br>
+
+            <select name="yn11" onchange="showDiv11(this)">
+                <option value="0" selected></option>
+                <option value="1"> Yes </option>
+                <option value="2"> Appliance capped off </option>
+                <option value="3"> No: Requires part </option>
+                <option value="4">No: Was previously disconnected </option>
+                <option value="5">No: Other reason </option>
+            </select>
+            <br><br><br>
+
+            <div id="hidden_div17" style="display:none;">
+                II. This section is finished. Progress to next section.
+            </div>
+
+            <div id="hidden_div18" style="display:none;">
+                II. Mark the capped off and filled out disconnection workflow.
+                <br>Then, progress to next section.
+            </div>
+
+            <div id="hidden_div19" style="display:none;">
+                II. This section is finished. Progress to next section.
+            </div>
+
+            <div id="hidden_div20" style="display:none;">
+                II. This section is finished. Progress to next section.
+            </div>
+
+            <div id="hidden_div21" style="display:none;">
+                II. What is the reason?
+                <br><br>
+                <textarea rows="5" cols="60" name="description7" placeholder="Enter the reason here."></textarea>
+                <br><br><br>
+                III. This section is finished. Progress to next section.
+                <br>
+            </div>
+
+        </div>
+        <br><br>
+
+        
 
 
 
@@ -333,15 +396,55 @@
         <div id="M">
             <br>
             <h3>M. Appliance Base</h3>
+
+            I. Does the appliance needs a base?<br>
+            (select No, if wall-mounted or sitting on a concrete.)
+            <br><br>
+
+            <select name="yn8" onchange="showDiv8(this)">
+                <option value="0" selected></option>
+                <option value="1">No</option>
+                <option value="2">Yes</option>
+            </select>
+            <br><br><br>
+
+            <div id="hidden_div16" style="display:none;">
+                <div style="margin-left: 50px;">
+                    a. Does it have a solid base?
+
+                    <select name="yn9">
+                        <option value="0" selected></option>
+                        <option value="1">No</option>
+                        <option value="2">Yes</option>
+                    </select>
+                </div>
+                <br><br><br>
+            </div>
+
+
+            II. Is the appliance level?
+            <br><br>
+
+            <select name="yn10">
+                <option value="0" selected></option>
+                <option value="1">No</option>
+                <option value="2">Yes</option>
+            </select>
+            <br><br><br>
+
+
+            III. Take a photo showing appliance base:
+            <br><br>
+
+            <input id="image10" type="file" name="photo10" onchange="PreviewImage10();" accept="image/*">
+            <br><br>
+            <img id="preview10" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+            <br><br><br>
+
+            IV. This section is finished. Progress to next section.
+            <br><br><br>
         </div>
         <br><br>
-
-        <!--13. Appliance Base
-Do the appliance needs a base? (Select No, if sitting on a concrete or wall-mounted)
-Yes- Does it have a solid base? (yes/no) - Is the appliance level? yes/no - photo
-No- Is the appliance level? yes/no - photo-->
-
-
 
 
 
@@ -434,20 +537,14 @@ No- Is the appliance level? yes/no - photo-->
         </div>
 
 
-
         <h2 id="summary_report">Summary Report</h2>
         <textarea rows="8" cols="80" name="description6" placeholder="Enter summary report here."></textarea>
         <br><br><br>
 
-
-
         <!--Submit and Reset-->
-
         <input type="submit" name="submit" id="submit" style="padding:5px;" value="Submit Details" title="This will upload all the details from step 1,2 & 3. Finalize before uploading.">
         <input type="reset" name="reset" id="reset" style="padding:5px; margin-left:1ch;" value="Reset All Entries" title="This will clear all data. Proceed with caution.">
     </form>
-
-
 </body>
 
 </html>

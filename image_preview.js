@@ -52,3 +52,9 @@ function PreviewImage9() {
   oFReader9.readAsDataURL(document.getElementById("image9").files[0]);
   oFReader9.onload = function (oFREvent) {document.getElementById("preview9").src = oFREvent.target.result;};
 }
+
+function PreviewImage10() {
+  var oFReader10 = new FileReader();
+  oFReader10.readAsDataURL(document.getElementById("image10").files[0]);
+  oFReader10.onload = function (oFREvent) {document.getElementById("preview10").src = oFREvent.target.result;};
+}

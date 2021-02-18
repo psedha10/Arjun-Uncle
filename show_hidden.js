@@ -104,3 +104,44 @@ function showDiv7(select) {
     document.getElementById("hidden_div15").style.display = "none";
   }
 }
+
+function showDiv8(select) {
+  if (select.value == 2) {
+    document.getElementById("hidden_div16").style.display = "block";
+  } else {
+    document.getElementById("hidden_div16").style.display = "none";
+  }
+}
+
+// Skip 9&10 (unused)
+function showDiv11(select) {
+  if (select.value == 1) {
+    document.getElementById("hidden_div17").style.display = "block";
+  } else {
+    document.getElementById("hidden_div17").style.display = "none";
+  }
+
+  if (select.value == 2) {
+    document.getElementById("hidden_div18").style.display = "block";
+  } else {
+    document.getElementById("hidden_div18").style.display = "none";
+  }
+
+  if (select.value == 3) {
+    document.getElementById("hidden_div19").style.display = "block";
+  } else {
+    document.getElementById("hidden_div19").style.display = "none";
+  }
+
+  if (select.value == 4) {
+    document.getElementById("hidden_div20").style.display = "block";
+  } else {
+    document.getElementById("hidden_div20").style.display = "none";
+  }
+
+  if (select.value == 5) {
+    document.getElementById("hidden_div21").style.display = "block";
+  } else {
+    document.getElementById("hidden_div21").style.display = "none";
+  }
+}
