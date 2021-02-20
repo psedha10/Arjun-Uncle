@@ -274,11 +274,53 @@
         <br><br><br><br>
 
 
+
+
+
+
+
         <div id="F">
             <br>
             <h3>F. P.T.R Drain</h3>
+            <br>
+
+            I. Is the PTR drain compliant with Technical Solution Sheet 6.09?
+            <br>
+
+            <select name="yn4" onchange="showDiv4(this)">
+                <option value="0" selected></option>
+                <option value="1">Appliance is secured correctly.</option>
+                <option value="2">Appliance is secured incorrectly.</option>
+                <option value="3">Appliance not required to be secured.</option>
+                <option value="4">Appliance not secured.</option>
+                <option value="5">Appliance not level and plumb.</option>
+            </select>
+            <br><br><br>
+
+            <div id="hidden_div8" style="display:none;">
+
+                II. Take a photo of Appliance Support:
+                <br><br>
+
+                <input id="image5" type="file" name="photo5" onchange="PreviewImage5();" accept="image/*">
+                <br><br>
+                <img id="preview5" src="images/preview.png" alt="Preview" style="width: 100px; height: 100px; padding-left: 8ch;">
+                <br><br><br>
+
+                III. This section is finished. Progress to next section.
+
+
         </div>
         <br><br><br><br>
+
+        <!--
+        Is the PTR drain compliant with Technical Solution Sheet 6.09?
+yes/no. [photo and finish]-->
+
+
+
+
+
 
 
         <div id="G">
@@ -309,25 +351,125 @@
         <br><br><br><br>
 
 
+
+
+
+
+
+
         <div id="K">
             <br>
             <h3>K. Appliance Condition</h3>
-        </div>
-        <br><br><br><br>
 
-        <!--11. Appliance Condition
-Good and safe {finish}
-General Wear and Tear/ Working Condition [finish]
-Worn condition due to age (safe and operational) [finish]
-UNSAFE requires disconnection and rectification [disconnect immediately and is there asbestos flue to be removed? Yes/no finish]
-Poor Condition requires Replacement (Not disconnected) [is there asbestos flue to be removed? Yes/no finish]
-Poor Condition requires Replacement (Disconnected) [Whats wrong? (text box) and is there asbestos flue to be removed? Yes/no finish]
-Requires part but functional [finish]
-Requires part (Appliance not operational) [Does the appliance needs to be disconnected until parts are replaced? yes - disconnect / finish
-                                                                                                                 no - finish
-Safety protocol that needs disconnection and replacement [Disconnect / is there asbestos flue to be removed? Yes/no finish]
-Appliance not operational [Was this appliance not operating before your attendance?] yes - finish
-                                                                                     no - do we need a diagonistic to attend to fix? yes/no finish.-->
+            I. What is the appliance condition?
+            <br><br>
+
+            <select name="yn12" onchange="showDiv12(this)">
+                <option value="0" selected></option>
+                <option value="1"> Good and Safe </option>
+                <option value="2"> General Wear and Tear/ Working Condition </option>
+                <option value="3"> Worn condition due to age (safe and operational) </option>
+                <option value="4"> UNSAFE requires disconnection and rectification </option>
+                <option value="5"> Poor Condition requires Replacement (Not disconnected) </option>
+                <option value="6"> Poor Condition requires Replacement (Disconnected) </option>
+                <option value="7"> Requires part but functional </option>
+                <option value="8"> Requires part (Appliance not operational) </option>
+                <option value="9"> Safety protocol that needs disconnection and replacement </option>
+                <option value="10"> Appliance not operational </option>
+            </select>
+            <br><br><br>
+
+            <div id="hidden_div22" style="display:none;">
+                II. This section is finished. Progress to next section.
+            </div>
+
+            <div id="hidden_div23" style="display:none;">
+                II. Disconnect the Appliance immediately.
+                <br><br><br>
+
+                III. Is there asbestos flue to be removed?
+                <br>
+                <select name="yn13">
+                    <option value="0" selected></option>
+                    <option value="1"> No </option>
+                    <option value="2"> Yes </option>
+                </select>
+                <br><br><br>
+
+                IV. This section is finished. Progress to next section.
+            </div>
+
+            <div id="hidden_div24" style="display:none;">
+                II. Is there asbestos flue to be removed?
+                <br>
+                <select name="yn14">
+                    <option value="0" selected></option>
+                    <option value="1"> No </option>
+                    <option value="2"> Yes </option>
+                </select>
+                <br><br><br>
+
+                III. This section is finished. Progress to next section.
+            </div>
+
+            <div id="hidden_div25" style="display:none;">
+                II. Why is the appliance disconnected?
+                <br><br>
+                <textarea rows="5" cols="60" name="description8" placeholder="Enter the reason here."></textarea>
+                <br><br><br>
+
+                III. Is there asbestos flue to be removed?
+                <br>
+                <select name="yn15">
+                    <option value="0" selected></option>
+                    <option value="1"> No </option>
+                    <option value="2"> Yes </option>
+                </select>
+                <br><br><br>
+
+                IV. This section is finished. Progress to next section.
+            </div>
+
+            <div id="hidden_div26" style="display:none;">
+                II. Does the appliance needs to be disconnected until parts are replaced?
+                <br>
+                <select name="yn16">
+                    <option value="0" selected></option>
+                    <option value="1"> No </option>
+                    <option value="2"> Yes </option>
+                </select>
+                <br><br><br>
+
+                III. If Yes, disconnect the appliance. If No, progress to next section.
+            </div>
+
+            <div id="hidden_div27" style="display:none;">
+                II. Was this appliance operating before your attendance?
+                <br>
+                <select name="yn17" onchange="showDiv17(this)">
+                    <option value="0" selected></option>
+                    <option value="1"> No </option>
+                    <option value="2"> Yes </option>
+                </select>
+                <br><br><br>
+
+                <div id="hidden_div28" style="display:none;margin-left:50px;">
+                    a. Do we need a diagonistic to attend to fix?
+                    <br>
+                    <select name="yn18" >
+                        <option value="0" selected></option>
+                        <option value="1"> No </option>
+                        <option value="2"> Yes </option>
+                    </select>
+                    <br><br><br>
+                </div>
+
+                III. This section is finished. Progress to next section.
+
+            </div>
+
+        </div>
+        <br><br><br>
 
 
 
@@ -384,7 +526,7 @@ Appliance not operational [Was this appliance not operating before your attendan
         </div>
         <br><br>
 
-        
+
 
 
 
@@ -607,6 +749,32 @@ Yes: Is the situation life threatening?
 No: Finish
 
 
+
+
+
+
+1. General Appliance Photo
+  a. Take 1 photo 2 meters away of the appliance showing its surrounding
+    [Upload Photo]
+  b. Is there any visible pre-existing damage to the appliance? [yes/ no option]
+    if yes {photo of damage} if no (move to step 2)
+
+2. Data Plate
+  a. Is the data plate accessible?
+    if yes [photo]/ if no [reason]
+  b. if no [Why cant the data plate be accessed?]
+     Options: Data plate has been removed.
+              Not easily accessible.
+              Worn unreadable.
+  c. IF worn unreadable [take a photo of worn data plate.]
+
+3. Support/ Fixing/ Securing of Appliance
+  Options: Appliance is secured correctly. [Photo and finish.]
+           Appliance is secured incorrectly. [note {What is wrong with current securing of appliance}, photo and finish.]
+           Appliance is not required to be secured. [finish.]
+           Appliance not secure. [note {How should the appliance be secured}, photo and finish]
+           Appliance not level and plumb. [finish.]
+
 11. Appliance Condition
 Good and safe {finish}
 General Wear and Tear/ Working Condition [finish]
@@ -646,35 +814,5 @@ No- Is the appliance level? yes/no - photo
   Any accidenatal damage caused by you? yes - photo and explanation (text box)
                                         no - finish
 
-
-
-
-COMMON IN ALL
-plate
-photo
-safety on completion
-General Notes [Text Box]
-
-1. General Appliance Photo
-  a. Take 1 photo 2 meters away of the appliance showing its surrounding
-    [Upload Photo]
-  b. Is there any visible pre-existing damage to the appliance? [yes/ no option]
-    if yes {photo of damage} if no (move to step 2)
-
-2. Data Plate
-  a. Is the data plate accessible?
-    if yes [photo]/ if no [reason]
-  b. if no [Why cant the data plate be accessed?]
-     Options: Data plate has been removed.
-              Not easily accessible.
-              Worn unreadable.
-  c. IF worn unreadable [take a photo of worn data plate.]
-
-3. Support/ Fixing/ Securing of Appliance
-  Options: Appliance is secured correctly. [Photo and finish.]
-           Appliance is secured incorrectly. [note {What is wrong with current securing of appliance}, photo and finish.]
-           Appliance is not required to be secured. [finish.]
-           Appliance not secure. [note {How should the appliance be secured}, photo and finish]
-           Appliance not level and plumb. [finish.]
 
 -->

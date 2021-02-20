@@ -145,3 +145,63 @@ function showDiv11(select) {
     document.getElementById("hidden_div21").style.display = "none";
   }
 }
+
+function showDiv12(select) {
+  if (
+    select.value == 1 ||
+    select.value == 2 ||
+    select.value == 3 ||
+    select.value == 7
+  ) {
+    document.getElementById("hidden_div22").style.display = "block";
+  } else {
+    document.getElementById("hidden_div22").style.display = "none";
+  }
+
+  if (select.value == 4 || select.value == 9) {
+    document.getElementById("hidden_div23").style.display = "block";
+  } else {
+    document.getElementById("hidden_div23").style.display = "none";
+  }
+
+  if (select.value == 5) {
+    document.getElementById("hidden_div24").style.display = "block";
+  } else {
+    document.getElementById("hidden_div24").style.display = "none";
+  }
+
+  if (select.value == 6) {
+    document.getElementById("hidden_div25").style.display = "block";
+  } else {
+    document.getElementById("hidden_div25").style.display = "none";
+  }
+
+  if (select.value == 8) {
+    document.getElementById("hidden_div26").style.display = "block";
+  } else {
+    document.getElementById("hidden_div26").style.display = "none";
+  }
+
+  if (select.value == 10) {
+    document.getElementById("hidden_div27").style.display = "block";
+  } else {
+    document.getElementById("hidden_div27").style.display = "none";
+  }
+}
+
+//skip 13,14,15,16,18
+function showDiv17(select) {
+  if (select.value == 2) {
+    document.getElementById("hidden_div28").style.display = "block";
+  } else {
+    document.getElementById("hidden_div28").style.display = "none";
+  }
+}
+
+function showDiv19(select) {
+  if (select.value == 2) {
+    document.getElementById("hidden_div28").style.display = "block";
+  } else {
+    document.getElementById("hidden_div28").style.display = "none";
+  }
+}
